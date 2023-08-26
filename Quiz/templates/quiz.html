@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Questions {% endblock %}
+
+{% block content %}
+<h1>Quiz Questions</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for question in questions %}
+            <p>{{ question.text }}</p>
+            {{ form.as_p }}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

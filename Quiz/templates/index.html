@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Quiz App {% endblock %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "index.css" %}"/>
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+    <header>
+        <img src="#" alt="image of quiz" />
+        <h2>Python Quiz</h2>
+        <a class="btn-quiz" href="{% url "quiz-page"%}">Start Quiz</a>
+    </header>
+    <p>Click On start quiz button to start the quiz  </p>
+</section>
+{% endblock %}

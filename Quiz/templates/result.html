@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} Result {% endblock %}
+
+{% block content %}
+<h1>Quiz Results</h1>
+    <ul>
+        {% for result in results %}
+            <li>{{ result.student }} - {{ result.submission_time }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
